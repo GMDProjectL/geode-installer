@@ -17,4 +17,4 @@ def get_text(key, locale='en_US.UTF-8'):
     if locale.startswith('ru'):
         return ru.get(key, '')
 
-    return ''
+    return en.get(key, '')
