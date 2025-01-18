@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Geode Installer
+Comment=Install Geometry Dash Modloader
+Path=/opt/geode-installer/
+Exec=python3 /opt/geode-installer/main.py %u
+Terminal=false
+Icon=/opt/geode-installer/geode-installer.png
+StartupNotify=true
+StartupWMClass=geode-installer
+Categories=Utility;
