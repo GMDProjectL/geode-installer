@@ -7,5 +7,6 @@
     "wine": "Wine",
     "steam": "Steam",
     "select_game_directory": "Выберите директорию игры",
-    "finished": "Готово!"
+    "finished": "Готово!",
+    "close_steam": "Пожалуйста, для начала, закройте Steam."
 }

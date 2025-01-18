@@ -7,5 +7,6 @@
     "wine": "Wine",
     "steam": "Steam",
     "select_game_directory": "Select Game Directory",
-    "finished": "Finished!"
+    "finished": "Finished!",
+    "close_steam": "Please, close Steam first."
 }

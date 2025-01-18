@@ -3,7 +3,7 @@ from gi import require_version
 require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk
 from locales import get_text
-from installer import install_geode
+from installer import install_geode, check_steam_running
 
 LANG = os.getenv('LANG', 'en_US.UTF-8')
 
@@ -69,6 +69,19 @@ class GeodeInstaller(Gtk.Window):
         button_box.pack_start(cancel_button, True, True, 0)
 
     def on_install_clicked(self, button):
+        if check_steam_running():
+            error_dialog = Gtk.MessageDialog(
+                parent=self, 
+                flags=Gtk.DialogFlags.DESTROY_WITH_PARENT, 
+                type=Gtk.MessageType.ERROR, 
+                buttons=Gtk.ButtonsType.OK, 
+                message_format=get_text('close_steam', LANG)
+            )
+
+            error_dialog.run()
+            error_dialog.destroy()
+            return
+
         install_geode(self.installation_type, self.game_directory)
 
         dialog = Gtk.MessageDialog(

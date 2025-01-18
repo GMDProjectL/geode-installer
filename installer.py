@@ -1,3 +1,4 @@
+import psutil
 import requests
 import zipfile
 import os
@@ -73,6 +74,15 @@ def get_steam_gd_path():
     steamapps = f'{os.getenv('HOME')}/.steam/steam/steamapps/common/Geometry Dash'
     return steamapps
 
+def check_steam_running():
+    steam_process = None
+    for proc in psutil.process_iter(['pid', 'name']):
+        if proc.info['name'] == 'steam':
+            steam_process = proc
+            break
+    
+    return steam_process is not None
+
 def install_geode(variant: Literal['wine'] | Literal['steam'], wine_path: str | None = None):
     print(f'Installing for: {variant}')
 
@@ -87,3 +97,7 @@ def install_geode(variant: Literal['wine'] | Literal['steam'], wine_path: str | 
 
     else:
         raise ValueError('Invalid variant. Please choose either "wine" or "steam".')
+
+
+if __name__ == '__main__':
+    print(check_steam_running())
