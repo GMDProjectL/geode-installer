@@ -1,0 +1,11 @@
+{
+    "geode_installer": "Geode Installer",
+    "welcome": "Welcome to the Geode Installer!",
+    "install": "Install",
+    "close": "Close",
+    "choose_your_installation": "Choose your installation:",
+    "wine": "Wine",
+    "steam": "Steam",
+    "select_game_directory": "Select Game Directory",
+    "finished": "Finished!"
+}

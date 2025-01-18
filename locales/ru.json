@@ -1,0 +1,11 @@
+{
+    "geode_installer": "Установщик Geode",
+    "welcome": "Добро пожаловать в установщик Geode!",
+    "install": "Установить",
+    "close": "Закрыть",
+    "choose_your_installation": "Выберите тип установки:",
+    "wine": "Wine",
+    "steam": "Steam",
+    "select_game_directory": "Выберите директорию игры",
+    "finished": "Готово!"
+}
